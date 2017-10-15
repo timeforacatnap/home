@@ -1,0 +1,47 @@
+<HTML>
+
+<HEAD>
+
+</HEAD>
+<body>
+
+
+<TD><FONT FACE="Verdana, MS Sans Serif, Geneva" SIZE="-2"><B>Instructions:</B><BR><B>1.</B> Click the 'Get Ideas' button.<BR><B>2.</B> Watch Ideas appear in the box.<BR><B>3.</B> Repeat to taste (use your Enter/Return key).</FONT></TD>
+
+
+</TABLE>
+
+<SCRIPT LANGUAGE="JAVASCRIPT">
+
+companyArray = new Array('Uber','Apple','AirBnB','Snapchat','Google','Pinterist','Dropbox','WeWork','Spotify','Groupon','Delivery Hero','Slack','Survey Monkey','Buzz Feeds','EverNote','EventBrite','Tinder','Shazam','eBay','Linkedin','Kickstarter','WhatsApp','Udacity','Duolinguo','Instagram','Facebook','YouTube','NetFlix','Reddit','Feedly','Headspace','iTunes');
+
+
+
+nounArray = new Array('Shoes','Cars','Juicers','people','history','art','information','maps','family','government','healthcare','computers','meat','music','data','books','food','law','birds','TV','investment','insurance','retirement','education','Activities/hobbies','media','cooking','friends','Safety','language','security','exams/tests','movies','relationships','accomodation','fishing','dancing','sports','modelling','hunting','farming','careers','teaching','energy','shopping','art','property','students','work','cigarettes','flights','boats','news','drugs','communication','images','clothing','make up','hairdressing','alcohol','customer service','architecture','design','private secuirty','charity','hygiene','homework','tourism','weekend activities','sex','injury','furniture','groceries','brands','personal trainers','money','bsuiness','games','illness','glasses','stocks','bitcoin','phones','cosmetics','skincare','jewellery','haircare','mental care','self-help','rocks','astronomy','HR benefits','work-life balance','time management','utilities','pets','exercise training','tickets');
+
+var max1 = companyArray.length;
+var max2 = nounArray.length;
+
+function getIdeas()
+{
+index1 = Math.round(Math.random() * max1); 
+index2 = Math.round(Math.random() * max2); 
+
+document.ideaForm.ideaFormText.value = "The " + companyArray[index1] + " of " + nounArray[index2]; 
+}
+
+</SCRIPT>
+
+
+
+<FORM NAME="ideaForm" onsubmit="return false">
+<INPUT TYPE="TEXT" NAME="ideaFormText" SIZE="50"><BR>
+<INPUT TYPE="BUTTON" VALUE="Get Ideas" onClick="getIdeas();"> 
+</FORM>
+
+
+<TD><FONT FACE="Verdana, MS Sans Serif, Geneva" SIZE="-2"><B>Next Steps:</B><BR><B>1.</B> Come up with a simple plan for how it makes money.<BR><B>2.</B> Come up with a simple plan for how to market it.<BR><B>3.</B> Come up with a one page pitch to sell your startup.</FONT></TD>
+
+</BODY>
+
+</HTML>
